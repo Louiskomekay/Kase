@@ -31,6 +31,7 @@ const Error = () => {
 
 export default Error
 
+// STYLING
 const Wrapper = styled.main`
     display: grid;
     place-items: center;
@@ -45,20 +46,7 @@ const Wrapper = styled.main`
         text-align: center;
         margin-bottom: 3rem;
     }
-    .btn {
-        background-color: var(--Blue1);
-        background-image: linear-gradient(90deg, var(--Blue1) 100%, var(--Blue2) 100%);
-        outline: none;
-        border: none;
-        padding: 1.4rem 8rem;
-        color: var(--lm-white2);
-        border-radius: 0.5rem;
-        cursor: pointer;
-        transition: var(--smooth);
-    }
-    .btn:hover {
-        box-shadow: .8rem .8rem 0px var(--lm-btnHover);  
-    }
+
     #errorImg {
         width: 16rem;
         height: 16rem;
@@ -76,16 +64,15 @@ const Wrapper = styled.main`
             margin-bottom: 1rem;
         }
 
-    .errorMessage {
-        font-size: 1.5rem;
-    }
+        .errorMessage {
+            font-size: 1.5rem;
+        }
         div p {
             font-size: 1rem;
-                    margin-bottom: 2rem;
+            margin-bottom: 2rem;
         }
-            .btn {
+        .btn {
         padding: 1.4rem 5.5rem;
-    }
-
+        }
     }
 `

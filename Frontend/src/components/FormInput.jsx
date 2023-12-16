@@ -1,21 +1,40 @@
-import React from 'react'
+import styled from "styled-components"
 
 const FormInput = ({ label, name, type, defaultValue }) => {
     return (
-        <div className='form-control'>
-            {/* Form Label */}
-            <label className="label">
-                <span>{label}</span>
-            </label>
-            {/* Form Input */}
-            <input
-                type={type}
-                name={name}
-                className='form-input'
-                defaultValue={defaultValue}
-            />
-        </div>
+        <Wrapper>
+            <div className='form-control'>
+                {/* Form Label */}
+                <label className="label">
+                    <span>{label}</span>
+                </label>
+                {/* Form Input */}
+                <input
+                    type={type}
+                    name={name}
+                    className='formInput stroke'
+                    defaultValue={defaultValue}
+                />
+            </div>
+        </Wrapper>
     )
 }
 
 export default FormInput
+
+const Wrapper = styled.section`
+    .form-control {
+        margin-bottom: 1rem;
+    }
+    .label {
+        display: block;
+        text-transform: capitalize;
+        margin-bottom: .3rem;
+    }
+    .formInput {
+        padding: 1.3rem;
+        width: 33rem;
+        background: none;
+        border-radius: var(--border-radius);
+    }
+`

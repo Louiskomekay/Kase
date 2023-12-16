@@ -1,17 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;800&display=swap');
 
 :root {
+  /* Colours */
   --lm-white1: #F5FDFF;
   --lm-white2: #E8F0F3;
   --dm-grey1: #212121;
   --dm-grey2: #313131;
   --Blue1: #2563EB;
   --Blue2: #528DFF;
+  --Blue3: #3b78fa;
   --Red: #F12222;
   --lm-grey1: #64748B;
   --lm-grey2: #C1CADB;
   --lm-btnHover: #DAE7F8;
+  /* Transition */
   --smooth: all 0.3s ease;
+  /* Border radius */
+  --border-radius: .5rem;
+  /* Font sizes */
+  --h1: 4rem;
+  --h2: 3rem;
+  --h2: 2rem;
+  --body-text: 1rem;
 }
 
 *,
@@ -29,3 +39,39 @@
 body {
   font-family: 'Hanken Grotesk', sans-serif;
 }
+
+.btn {
+  display: block;
+  background-color: var(--Blue1);
+  outline: none;
+  border: none;
+  padding: 1.3rem;
+  color: var(--lm-white2);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: var(--smooth);
+  text-transform: capitalize;
+}
+
+.btn:hover {
+  background-color: var(--Blue3);
+}
+
+.strokeBtn {
+  display: block;
+  background: none;
+  outline: none;
+  border: none;
+  padding: 1.3rem;
+  color: var(--lm-white2);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: var(--smooth);
+  text-transform: capitalize;
+}
+
+.strokeBtn:hover {
+  background-color: var(--Blue3);
+}
+
+@media (max-width: 33.75em) {}

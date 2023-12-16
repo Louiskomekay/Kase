@@ -7,13 +7,26 @@ import { About, Orders, Products, CheckOut, Error, HomeLayout, Landing, Login, P
 //ROUTER IMPORT
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-//Themes
+//THEMES STYLING
 import { LightTheme, DarkTheme } from './utils/Themes'
 const Wrapper = styled.div`
   color:${({ theme }) => theme.color};
-  background:${({ theme }) => theme.background};
+  background:${({ theme }) => theme.backgroundColor};
   .cardColor{
     background: ${({ theme }) => theme.cardColor};
+  }
+  .formInput{
+    border: ${({ theme }) => theme.stroke};
+    color:${({ theme }) => theme.color} ;
+  }
+  .strokeBtn{
+    border: ${({ theme }) => theme.stroke};
+    color:${({ theme }) => theme.strokeBtnColor} ;
+  }
+  .strokeBtn:hover{
+    background:var(--Blue2);
+    border: ${({ theme }) => theme.strokeBorderHover};
+    color:${({ theme }) => theme.backgroundColor};
   }
   /* .navLink{
     background: ${({ theme }) => theme.color};
