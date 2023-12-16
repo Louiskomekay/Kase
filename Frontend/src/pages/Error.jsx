@@ -1,7 +1,6 @@
 import { useRouteError, Link } from "react-router-dom"
 import styled from 'styled-components'
-import errorImage1 from './images/404.webp'
-import errorImage2 from './images/error.webp'
+import { errorImage1, errorImage2 } from "../images";
 
 const Error = () => {
     const error = useRouteError();

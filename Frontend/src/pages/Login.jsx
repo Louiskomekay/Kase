@@ -1,8 +1,16 @@
+import { FormInput, SubmitBtn } from "../components";
+import { Form, Link } from 'react-router-dom'
+import styled from 'styled-components'
 
 const Login = () => {
     return (
-        <h2>Login</h2>
+        <Wrapper>
+            <Form></Form>
+        </Wrapper>
     )
 }
 
+const Wrapper = styled.section`
+    
+`
 export default Login;

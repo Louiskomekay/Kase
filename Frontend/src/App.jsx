@@ -78,7 +78,7 @@ const router = createBrowserRouter([
 
 const App = () => {
   return (
-    <ThemeProvider theme={DarkTheme}>
+    <ThemeProvider theme={LightTheme}>
       <Wrapper>
         <RouterProvider router={router} />
       </Wrapper>
