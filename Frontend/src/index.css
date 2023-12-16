@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;800&display=swap');
 
 :root {
-  --white: #F5FDFF;
-  --primaryBlue: #2563EB;
-  --secondaryRed: #F12222;
-  --secondaryBlue: #528DFF;
-  --grey1: #64748B;
-  --grey2: #C1CADB;
+  --lm-white1: #F5FDFF;
+  --lm-white2: #E8F0F3;
+  --dm-grey1: #212121;
+  --dm-grey2: #313131;
+  --Blue1: #2563EB;
+  --Blue2: #528DFF;
+  --Red: #F12222;
+  --lm-grey1: #64748B;
+  --lm-grey2: #C1CADB;
+  --lm-btnHover: #DAE7F8;
+  --smooth: all 0.3s ease;
 }
 
 *,

@@ -1,8 +1,24 @@
+//STYLED IMPORT
+import styled, { ThemeProvider } from 'styled-components'
+
 // PAGE IMPORTS
 import { About, Orders, Products, CheckOut, Error, HomeLayout, Landing, Login, PrivacyPolicy, Register, SingleProduct, TermsAndCondition, Cart } from './pages'
 
 //ROUTER IMPORT
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
+//Themes
+import { LightTheme, DarkTheme } from './utils/Themes'
+const Wrapper = styled.div`
+  color:${({ theme }) => theme.color};
+  background:${({ theme }) => theme.background};
+  .cardColor{
+    background: ${({ theme }) => theme.cardColor};
+  }
+  /* .navLink{
+    background: ${({ theme }) => theme.color};
+  } */
+`
 
 const router = createBrowserRouter([
   {
@@ -62,7 +78,11 @@ const router = createBrowserRouter([
 
 const App = () => {
   return (
-    <RouterProvider router={router} />
+    <ThemeProvider theme={DarkTheme}>
+      <Wrapper>
+        <RouterProvider router={router} />
+      </Wrapper>
+    </ThemeProvider>
   )
 }
 
