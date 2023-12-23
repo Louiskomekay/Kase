@@ -37,4 +37,11 @@ const Wrapper = styled.section`
         background: none;
         border-radius: var(--border-radius);
     }
+
+    /* Mobile */
+    @media(max-width:33.75em){
+        .formInput {
+        width: 23rem;
+        }
+    }
 `

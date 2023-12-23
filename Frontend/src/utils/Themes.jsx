@@ -6,6 +6,8 @@ export const LightTheme = {
     stroke: '1px solid #64748B',
     strokeBtnColor: '#64748B',
     strokeBorderHover: '1px solid #528DFF',
+    pseudoBackgroundColor: '#EFF3FB',
+    NavBackgroundColor: '#F5FDFF',
 }
 
 export const DarkTheme = {
@@ -16,4 +18,6 @@ export const DarkTheme = {
     stroke: '1px solid #C1CADB',
     strokeBtnColor: ' #C1CADB',
     strokeBorderHover: '1px solid #528DFF',
+    pseudoBackgroundColor: '#262626',
+    NavBackgroundColor: '#262626'
 }

@@ -40,6 +40,11 @@ body {
   font-family: 'Hanken Grotesk', sans-serif;
 }
 
+.layoutWidth {
+  margin: auto 0;
+  padding: 1rem 4rem;
+}
+
 .btn {
   display: block;
   background-color: var(--Blue1);
@@ -73,5 +78,7 @@ body {
 .strokeBtn:hover {
   background-color: var(--Blue3);
 }
+
+/* nav ul li a:not(.active):hover {} */
 
 @media (max-width: 33.75em) {}

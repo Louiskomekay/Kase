@@ -12,7 +12,7 @@ const Login = () => {
                     <Form method="POST">
                         <div className="form-copy">
                             <h2>Welcome</h2>
-                            <p>Welcome back. Please enter your details</p>
+                            <p>Welcome back. Please login with your details.</p>
                         </div>
 
                         <FormInput type='email' label='email' name='email' defaultValue='test@test.com' />
@@ -20,12 +20,17 @@ const Login = () => {
 
                         <div className="buttons">
                             <SubmitBtn text='login' className='btn submitBtn' />
-                            <button className="strokeBtn strokeButton">Guest user</button>
+                        </div>
+
+                        <button className="strokeBtn strokeButton">Guest user</button>
+
+                        <div className="crumbMessage">
+                            <p>Don’t have an account? <Link to='/Register'> <span className="crumbRegister">Register Here</span> </Link></p>
                         </div>
                     </Form>
                 </div>
                 {/* image */}
-                <div className="kaseImg"><img src={KaseLogoImg} alt="image" /></div>
+                <div className="kaseImg pseudoBackgroundColor"><img src={KaseLogoImg} alt="image" /></div>
             </div>
         </Wrapper>
     )
@@ -47,6 +52,7 @@ const Wrapper = styled.section`
     .kaseImg img {
         width: 100%;
         height: 100%;
+        object-fit:cover;
     }
     .form {
         display: grid;
@@ -69,11 +75,50 @@ const Wrapper = styled.section`
     .strokeButton {
         width: 33rem;
     }
+    .crumbMessage {
+        margin-top: 1rem;
+    }
+    .crumbRegister {
+        color: var(--Blue1);
+        transition: var(--smooth);
+    }
+    .crumbRegister:hover {
+        color: var(--Blue2);
+    }
 
+    /* Tablet */
+    @media (max-width:74em) {
+        .form-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+        }
+        .strokeButton, .submitBtn {
+        width: 33rem;
+        }
+        .kaseImg {
+        overflow: hidden;
+        height: 20rem;
+        grid-row-start: 0;
+        grid-row-end: 1;
+        }
+    }
+
+    /* Mobile */
     @media (max-width:33.75em) {
         .form-container {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+        }
+        .strokeButton, .submitBtn {
+        width: 23rem;
+        }
+        .kaseImg {
+        overflow: hidden;
+        height: 20rem;
+        grid-row-start: 0;
+        grid-row-end: 1;
         }
     }
 `

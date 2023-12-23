@@ -21,12 +21,22 @@ const Wrapper = styled.div`
   }
   .strokeBtn{
     border: ${({ theme }) => theme.stroke};
-    color:${({ theme }) => theme.strokeBtnColor} ;
+    color:${({ theme }) => theme.strokeBtnColor};
   }
   .strokeBtn:hover{
     background:var(--Blue2);
     border: ${({ theme }) => theme.strokeBorderHover};
     color:${({ theme }) => theme.backgroundColor};
+  }
+  .pseudoBackgroundColor{
+    background:${({ theme }) => theme.pseudoBackgroundColor};
+  }
+  .nav-container {
+    color: ${({ theme }) => theme.color};
+    background :${({ theme }) => theme.NavBackgroundColor};
+    .link {
+      color: ${({ theme }) => theme.color};
+    }
   }
   /* .navLink{
     background: ${({ theme }) => theme.color};
@@ -91,7 +101,7 @@ const router = createBrowserRouter([
 
 const App = () => {
   return (
-    <ThemeProvider theme={LightTheme}>
+    <ThemeProvider theme={DarkTheme}>
       <Wrapper>
         <RouterProvider router={router} />
       </Wrapper>
@@ -100,3 +110,4 @@ const App = () => {
 }
 
 export default App
+
