@@ -74,6 +74,7 @@ const Wrapper = styled.section`
     }
     .strokeButton {
         width: 33rem;
+        padding: 1.3rem;
     }
     .crumbMessage {
         margin-top: 1rem;

@@ -8,60 +8,71 @@ import { FiShoppingCart } from "react-icons/fi";
 const Navbar = () => {
     return (
         <Wrapper>
-            <div className='nav-container'>
-                <div className='logoIcon navbar-start'>
-                    <Link to='/'><KaseLogo className='mainLogo' /></Link>
+            <nav className='nav-container'>
+                <div className='menu-icon'><IoMenu /></div>
+                <div className="nav-start">
+                    <Link> < KaseLogo className='KaseLogo' /> </Link>
                 </div>
 
-                <div className='navbar-center'>
-                    <ul>
-                        <li className='navLink'> <NavLink to='/' className='link'>Home</NavLink> </li>
-                        <li className='navLink'> <NavLink to='/About' className='link'>About</NavLink> </li>
-                        <li className='navLink'> <NavLink to='/Products' className='link'>Products</NavLink> </li>
-                        <li className='navLink'> <NavLink to='/Orders' className='link'>Orders</NavLink> </li>
-                    </ul>
+                <ul className='nav-center'>
+                    <NavLink to='/' className='nav-link'>Home</NavLink>
+                    <NavLink to='/About' className='nav-link'>About</NavLink>
+                    <NavLink to='/Products' className='nav-link'>Products</NavLink>
+                    <NavLink to='/Orders' className='nav-link'>Orders</NavLink>
+                </ul>
+
+                <div className='nav-end'>
+                    <Link to='/Login' className='nav-end-item'>Login</Link>
+                    <Link to='/Cart' className='nav-end-item'><FiShoppingCart /></Link>
+                    <div className='nav-end-item'><BsSunFill /></div>
                 </div>
-
-                <div className='navbar-end'>
-                    {/* Login */}
-                    <div><Link to='/Login' className='link'>Login</Link></div>
-
-                    {/* Theme setup */}
-                    <div><BsMoonFill /></div>
-
-                    {/* Cart link */}
-                    <NavLink to='/Cart' className='link'>
-                        <FiShoppingCart />
-                    </NavLink>
-                </div>
-            </div>
+            </nav>
         </Wrapper>
     )
 }
 
 export default Navbar
 
-const Wrapper = styled.nav`
-    .nav-container {
-        display: flex;
-        justify-content: space-between;
-        padding: .5rem 4rem;
-        align-items: center;
-    }
-
-.navbar-center ul {
+// STYLING
+const Wrapper = styled.div`
+.nav-container{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3.5rem;
+    position: relative;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.KaseLogo {
+    width: 7rem;
+}
+
+.nav-center, .nav-end {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-end {
     gap: 3rem;
 }
 
-.navbar-end {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
+.nav-center .nav-link, .nav-end .nav-end-item {
+    display: block;
 }
 
-.mainLogo{
-    width: 6rem;
+.nav-center .nav-link, .active {
+    padding: .5rem 1rem;
+    margin-right: 1.5rem;
+    border-radius: var(--border-radius);
+}
+
+.nav-link.active {
+    color: #F5FDFF;
+    background: var(--Red);
 }
 `

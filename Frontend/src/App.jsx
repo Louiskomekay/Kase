@@ -10,6 +10,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 //THEMES STYLING
 import { LightTheme, DarkTheme } from './utils/Themes'
 const Wrapper = styled.div`
+  /* GENERAL STYLING */
   color:${({ theme }) => theme.color};
   background:${({ theme }) => theme.backgroundColor};
   .cardColor{
@@ -31,16 +32,23 @@ const Wrapper = styled.div`
   .pseudoBackgroundColor{
     background:${({ theme }) => theme.pseudoBackgroundColor};
   }
+
+  /* NAVSTYLING */
   .nav-container {
-    color: ${({ theme }) => theme.color};
-    background :${({ theme }) => theme.NavBackgroundColor};
-    .link {
-      color: ${({ theme }) => theme.color};
-    }
+    background: ${({ theme }) => theme.navContainerBG};
+    box-shadow: ${({ theme }) => theme.navContainerDropShadow};
   }
-  /* .navLink{
-    background: ${({ theme }) => theme.color};
-  } */
+  .KaseLogo {
+    color:${({ theme }) => theme.logoColor}
+  }
+  .nav-center .nav-link, .nav-end .nav-end-item {
+    color:${({ theme }) => theme.color};
+    transition: var(--smooth);
+  }
+  .nav-center .nav-link:not(.active):hover {
+    background: ${({ theme }) => theme.navLinkHover};
+  }
+
 `
 
 const router = createBrowserRouter([

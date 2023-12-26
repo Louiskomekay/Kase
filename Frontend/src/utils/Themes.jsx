@@ -7,7 +7,9 @@ export const LightTheme = {
     strokeBtnColor: '#64748B',
     strokeBorderHover: '1px solid #528DFF',
     pseudoBackgroundColor: '#EFF3FB',
-    NavBackgroundColor: '#F5FDFF',
+    navContainerBG: '#F5FDFF',
+    navContainerDropShadow: '0px 4px 4px 0px #cfd8ea',
+    navLinkHover: '#e4e7ef'
 }
 
 export const DarkTheme = {
@@ -19,5 +21,7 @@ export const DarkTheme = {
     strokeBtnColor: ' #C1CADB',
     strokeBorderHover: '1px solid #528DFF',
     pseudoBackgroundColor: '#262626',
-    NavBackgroundColor: '#262626'
+    navContainerBG: '#262626',
+    navContainerDropShadow: '0px 4px 4px 0px #171717',
+    navLinkHover: '#2e2e2e'
 }
