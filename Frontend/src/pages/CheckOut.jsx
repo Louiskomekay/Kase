@@ -1,8 +1,8 @@
 
-const CheckOut = () => {
+const Checkout = () => {
     return (
-        <h2>CheckOut</h2>
+        <h2>Checkout</h2>
     )
 }
 
-export default CheckOut
+export default Checkout

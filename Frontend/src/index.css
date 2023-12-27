@@ -42,7 +42,7 @@ body {
 
 .layoutWidth {
   margin: auto 0;
-  padding: 1rem 4rem;
+  padding: 1rem 3.6rem;
 }
 
 .btn {
@@ -78,6 +78,9 @@ body {
   background-color: var(--Blue3);
 }
 
-/* nav ul li a:not(.active):hover {} */
-
-@media (max-width: 33.75em) {}
+@media (max-width: 76em) {
+  .layoutWidth {
+    margin: auto 0;
+    padding: 1rem 1.8rem;
+  }
+}

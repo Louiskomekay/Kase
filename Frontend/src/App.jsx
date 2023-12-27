@@ -9,7 +9,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 //THEMES STYLING
 import { LightTheme, DarkTheme } from './utils/Themes'
-const Wrapper = styled.div`
+const Wrapper = styled.section`
   /* GENERAL STYLING */
   color:${({ theme }) => theme.color};
   background:${({ theme }) => theme.backgroundColor};
@@ -45,10 +45,19 @@ const Wrapper = styled.div`
     color:${({ theme }) => theme.color};
     transition: var(--smooth);
   }
-  .nav-center .nav-link:not(.active):hover {
+  .nav-center .nav-link:not(.active):hover, .mobile-nav-link:hover {
     background: ${({ theme }) => theme.navLinkHover};
   }
-
+  .menu-icon {
+    outline: ${({ theme }) => theme.stroke} ;
+  }
+  .mobile-nav-link-container {
+    background:${({ theme }) => theme.backgroundColor};
+    box-shadow: ${({ theme }) => theme.navContainerDropShadow};
+  }
+  .mobile-nav-link-container .mobile-nav-link {
+    color:${({ theme }) => theme.color};
+  }
 `
 
 const router = createBrowserRouter([
