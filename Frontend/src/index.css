@@ -40,6 +40,10 @@ body {
   font-family: 'Hanken Grotesk', sans-serif;
 }
 
+nav {
+  transition: var(--smooth);
+}
+
 .layoutWidth {
   margin: auto 0;
   padding: 1rem 3.6rem;

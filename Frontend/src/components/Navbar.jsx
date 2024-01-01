@@ -1,18 +1,20 @@
 import { Link, NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import { KaseLogo } from '../utils/Logo'
-import { BsCart3, BsMoonFill, BsSunFill } from 'react-icons/bs'
 import { IoMenu } from "react-icons/io5";
 import { FiShoppingCart } from "react-icons/fi";
 import { useState } from 'react';
+import ModeSwitch from '../utils/ModeSwitch';
 
 const Navbar = () => {
-    const [isOpen, setIsOpen] = useState('false');
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
         <Wrapper>
             <nav className='nav-container'>
-                <div className='menu-icon'><IoMenu /></div>
+                <div className='menu-icon' onClick={() => {
+                    return console.log(setIsMenuOpen(!isMenuOpen));
+                }}><IoMenu /></div>
                 <div className="nav-start">
                     <Link> < KaseLogo className='KaseLogo' /> </Link>
                 </div>
@@ -27,18 +29,20 @@ const Navbar = () => {
                 </ul>
 
                 <div className='nav-end'>
-                    <Link to='/Login' className='nav-end-item strokeBtn strokeButton'>Login</Link>
                     <div className='cart'>
                         <Link to='/Cart' className='nav-end-item' >
                             <FiShoppingCart className='cartIcon' />
                         </Link>
                         <div className='cartItemNumber'>2</div>
                     </div>
-                    <div className='nav-end-item'><BsSunFill className='mode-icon' /></div>
+                    <div className='nav-end-item'>
+                        <ModeSwitch />
+                    </div>
+                    <Link to='/Login' className='nav-end-item strokeBtn strokeButton'>Login</Link>
                 </div>
             </nav>
 
-            <div className='mobile-nav-link-container'>
+            <div className={isMenuOpen ? 'mobile-nav-link-container open' : 'mobile-nav-link-container'}>
                 <NavLink className='mobile-nav-link' to='/'>Home</NavLink>
                 <NavLink to='/About' className='mobile-nav-link'>About</NavLink>
                 <NavLink to='/Products' className='mobile-nav-link'>Products</NavLink>
@@ -65,6 +69,7 @@ const Wrapper = styled.div`
 
 .mobile-nav-link-container {
     display: none;
+    transition: var(--smooth);
 }
 
 .menu-icon {
@@ -139,7 +144,7 @@ const Wrapper = styled.div`
     height: 1.5rem;
 }
 
-/* Mobile */
+/* Mobile and Tab */
 @media (max-width:76em) {
     .nav-container{
         padding: 1.3rem 1.8rem;
@@ -147,11 +152,20 @@ const Wrapper = styled.div`
     }
     .mobile-nav-link-container {
         position: absolute;
-        display: block;
-        width: 40vw;
-        padding: 1.7rem;
+        display: none;
+        width: 60vw;
+        padding: 1.5rem;
         z-index: 100;
         border-radius: var(--border-radius);
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        transition: var(--smooth);
+        transform: translateX(-400px);
+    }
+    .mobile-nav-link-container.open {
+        display: block;
+        transform: translateX(0px);
+        transition: var(--smooth);
     }
     .mobile-nav-link, .active {
         display: block;
@@ -169,7 +183,7 @@ const Wrapper = styled.div`
         background: var(--Red);
     }
     .KaseLogo {
-        display: block;
+        display: none;
     }
     .menu-icon {
         display: grid;

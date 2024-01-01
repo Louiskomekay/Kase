@@ -9,7 +9,7 @@ export const LightTheme = {
     pseudoBackgroundColor: '#EFF3FB',
     navContainerBG: '#F5FDFF',
     navContainerDropShadow: '0px 4px 4px 0px #cfd8ea',
-    navLinkHover: '#e4e7ef'
+    navLinkHover: '#e4e7ef',
 }
 
 export const DarkTheme = {
