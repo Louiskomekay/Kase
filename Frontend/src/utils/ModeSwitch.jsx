@@ -1,6 +1,7 @@
 import { BsMoonFill, BsSunFill } from 'react-icons/bs'
 import styled from 'styled-components'
 import { useGlobalContext } from '../context';
+import { useEffect } from 'react';
 
 const ModeSwitch = () => {
     const { theme, toggleTheme } = useGlobalContext();
@@ -12,8 +13,7 @@ const ModeSwitch = () => {
                     className='dark_mode_input'
                     type='checkbox'
                     id='darkmode-toggle'
-                    // onChange={() => toggleTheme(theme === 'light' ? 'dark' : 'light')}
-                    onChange={() => toggleTheme(theme === 'dark' ? 'light' : 'dark')}
+                    onChange={() => toggleTheme(theme === 'light' ? 'dark' : 'light')}
                 />
                 <label className='dark_mode_label' htmlFor='darkmode-toggle'>
                     <BsSunFill className='icon sun' />

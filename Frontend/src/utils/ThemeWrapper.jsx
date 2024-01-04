@@ -36,6 +36,9 @@ export const ThemeWrapper = styled.section`
     color:${({ theme }) => theme.color};
     transition: var(--smooth);
   }
+  .nav-link.active {
+    color: var(--lm-white1);
+  }
   .nav-center .nav-link:not(.active):hover, .mobile-nav-link:hover {
     background: ${({ theme }) => theme.navLinkHover};
   }
@@ -48,5 +51,18 @@ export const ThemeWrapper = styled.section`
   }
   .mobile-nav-link-container .mobile-nav-link {
     color:${({ theme }) => theme.color};
+  }
+  .switchIconContainer{
+    background: ${({ theme }) => theme.navLinkHover};
+    display: grid;
+    place-items: center;
+    height: 2.5rem; 
+    width: 2.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--smooth);
+  }
+  .switchIconContainer:hover{
+    border: ${({ theme }) => theme.switchIconContainerHover};
   }
 `

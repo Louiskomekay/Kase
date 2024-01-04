@@ -4,7 +4,7 @@ import { KaseLogo } from '../utils/Logo'
 import { IoMenu } from "react-icons/io5";
 import { FiShoppingCart } from "react-icons/fi";
 import { useState } from 'react';
-import ModeSwitch from '../utils/ModeSwitch';
+import SwitchIcon from '../utils/SwitchIcon';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,7 +36,7 @@ const Navbar = () => {
                         <div className='cartItemNumber'>2</div>
                     </div>
                     <div className='nav-end-item'>
-                        <ModeSwitch />
+                        <SwitchIcon />
                     </div>
                     <Link to='/Login' className='nav-end-item strokeBtn strokeButton'>Login</Link>
                 </div>
@@ -87,7 +87,7 @@ const Wrapper = styled.div`
 }
 
 .nav-end {
-    gap: 3rem;
+    gap: 2rem;
 }
 
 .nav-center .nav-link, .nav-end .nav-end-item {
@@ -99,11 +99,8 @@ const Wrapper = styled.div`
     margin-right: 1.5rem;
     border-radius: var(--border-radius);
 }
-.active {
-    color: var(--lm-white1);
-}
+
 .nav-link.active {
-    color: #F5FDFF;
     background: var(--Red);
 }
 
@@ -113,6 +110,8 @@ const Wrapper = styled.div`
 
 .cart {
     position: relative;
+    top: 6px;
+    margin-right:10px;
 }
 
 .cartIcon {

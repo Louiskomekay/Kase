@@ -12,7 +12,7 @@ const App = () => {
   const { theme } = useGlobalContext();
 
   return (
-    <ThemeProvider theme={theme === 'dark' ? LightTheme : DarkTheme}>
+    <ThemeProvider theme={theme === 'light' ? LightTheme : DarkTheme}>
       <ThemeWrapper>
         <RouterProvider router={Router} />
       </ThemeWrapper>

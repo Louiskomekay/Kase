@@ -9,7 +9,8 @@ export const LightTheme = {
     pseudoBackgroundColor: '#EFF3FB',
     navContainerBG: '#F5FDFF',
     navContainerDropShadow: '0px 4px 4px 0px #cfd8ea',
-    navLinkHover: '#e4e7ef',
+    navLinkHover: '#dce0ec',
+    switchIconContainerHover: '1px solid #afbccf',
 }
 
 export const DarkTheme = {
@@ -23,5 +24,6 @@ export const DarkTheme = {
     pseudoBackgroundColor: '#262626',
     navContainerBG: '#262626',
     navContainerDropShadow: '0px 4px 4px 0px #171717',
-    navLinkHover: '#2e2e2e'
+    navLinkHover: '#363535',
+    switchIconContainerHover: '1px solid #878e90',
 }
