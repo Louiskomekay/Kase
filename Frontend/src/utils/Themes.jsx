@@ -10,13 +10,16 @@ export const LightTheme = {
     navContainerBG: '#F5FDFF',
     navContainerDropShadow: '0px 4px 4px 0px #cfd8ea',
     navLinkHover: '#dce0ec',
+    footerLinkHover: '#528DFF',
     switchIconContainerHover: '1px solid #afbccf',
+    footerBorder: '2px solid #d1ddee',
+    footerDivider: '#d1ddee',
 }
 
 export const DarkTheme = {
-    color: '#F5FDFF',
+    color: '#d5d8d8',
     backgroundColor: '#212121',
-    cardColor: '#313131',
+    cardColor: '#262626',
     logoColor: '#F5FDFF',
     stroke: '1px solid #C1CADB',
     strokeBtnColor: ' #C1CADB',
@@ -25,5 +28,8 @@ export const DarkTheme = {
     navContainerBG: '#262626',
     navContainerDropShadow: '0px 4px 4px 0px #171717',
     navLinkHover: '#363535',
+    footerLinkHover: '#ffffff',
     switchIconContainerHover: '1px solid #878e90',
+    footerBorder: '2px solid #3d4243',
+    footerDivider: '#3d4243',
 }

@@ -4,9 +4,7 @@ const HomeLayout = () => {
     return (
         <>
             <Navbar />
-            <section className="layoutWidth">
-                <Outlet />
-            </section>
+            <Outlet />
         </>
     )
 }

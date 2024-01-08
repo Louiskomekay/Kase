@@ -62,9 +62,12 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 3.5rem;
+    padding: var(--page-margin);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     position: sticky;
     top: 0;
+    z-index: 500rem;
 }
 
 .mobile-nav-link-container {
@@ -106,6 +109,10 @@ const Wrapper = styled.div`
 
 .nav-end .strokeButton {
     padding: .5rem 1rem;
+}
+
+.strokeBtn.strokeButton:hover {
+    color: var(--lm-white1);
 }
 
 .cart {
@@ -182,7 +189,7 @@ const Wrapper = styled.div`
         background: var(--Red);
     }
     .KaseLogo {
-        display: none;
+        display: block;
     }
     .menu-icon {
         display: grid;
@@ -213,6 +220,12 @@ const Wrapper = styled.div`
         font-size: 14px;
         top: -16px;
         right: -20px;
+    }
+
+    @media (max-width:33.75em){
+        .KaseLogo {
+            display: none;
+        }
     }
 }
 `

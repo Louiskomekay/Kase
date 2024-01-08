@@ -60,11 +60,14 @@ const Wrapper = styled.section`
         place-content: center;
     }
     .form h2 {
-        font-size: 3rem;
+        font-size: var(--fs-600);
         color: var(--Blue1);
     }
     .form-copy {
         margin-bottom: 1.4rem;
+    }
+    .form-copy p{
+        font-size: var(--fs-400);
     }
     .submitBtn {
         width: 33rem;

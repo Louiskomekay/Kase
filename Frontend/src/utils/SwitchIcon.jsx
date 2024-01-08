@@ -1,4 +1,4 @@
-import { BsSunFill } from 'react-icons/bs'
+import { BsMoonFill, BsSunFill } from 'react-icons/bs'
 import { useGlobalContext } from '../context';
 import { useEffect } from 'react';
 
@@ -11,7 +11,7 @@ const SwitchIcon = () => {
 
     return (
         <div className='switchIconContainer' onClick={() => toggleTheme(theme === 'light' ? 'dark' : 'light')}>
-            <BsSunFill className='switchIcon' />
+            {theme === 'light' ? <BsMoonFill /> : <BsSunFill />}
         </div>
     )
 }

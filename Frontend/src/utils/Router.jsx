@@ -1,5 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom'
-import { About, Orders, Products, CheckOut, Error, HomeLayout, Landing, Login, PrivacyPolicy, Register, SingleProduct, TermsAndCondition, Cart } from '../pages'
+import { About, Orders, Products, CheckOut, Error, HomeLayout, Landing, Login, PrivacyPolicy, Register, SingleProduct, TermsAndCondition, Cart, ContactUs } from '../pages'
 
 export const Router = createBrowserRouter([
     {
@@ -38,6 +38,10 @@ export const Router = createBrowserRouter([
             {
                 path: 'TermsAndCondition',
                 element: <TermsAndCondition />
+            },
+            {
+                path: 'ContactUs',
+                element: <ContactUs />
             },
             {
                 path: 'Cart',

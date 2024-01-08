@@ -13,15 +13,27 @@
   --lm-grey1: #64748B;
   --lm-grey2: #C1CADB;
   --lm-btnHover: #DAE7F8;
+  --page-margin: 0rem 3.5rem;
+
   /* Transition */
   --smooth: all 0.3s ease;
+
   /* Border radius */
   --border-radius: .5rem;
+  --border-radius2: 1rem;
+
   /* Font sizes */
-  --h1: 4rem;
-  --h2: 3rem;
-  --h2: 2rem;
-  --body-text: 1rem;
+  --fs-xl: clamp(3.5rem, 12vw + 1rem, 12rem);
+  --fs-600: 3rem;
+  --fs-400: 1.125rem;
+}
+
+@media (max-width: 76em) {
+  :root {
+    --fs-600: 2rem;
+    --fs-400: 1rem;
+    --page-margin: 0rem 1.8rem;
+  }
 }
 
 *,
@@ -42,11 +54,6 @@ body {
 
 nav {
   transition: var(--smooth);
-}
-
-.layoutWidth {
-  margin: auto 0;
-  padding: 1rem 3.6rem;
 }
 
 .btn {

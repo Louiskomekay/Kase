@@ -18,10 +18,25 @@ export const ThemeWrapper = styled.section`
   .strokeBtn:hover{
     background:var(--Blue2);
     border: ${({ theme }) => theme.strokeBorderHover};
-    color:${({ theme }) => theme.backgroundColor};
   }
   .pseudoBackgroundColor{
     background:${({ theme }) => theme.pseudoBackgroundColor};
+  }
+  .PageImageContainer {
+    background:${({ theme }) => theme.cardColor};
+  }
+  .footer-container{
+    background:${({ theme }) => theme.backgroundColor};
+    border-top: ${({ theme }) => theme.footerBorder};
+  }
+  .footer-links .footer-link {
+    color: ${({ theme }) => theme.color};
+  }
+  .footer-links .footer-link:hover {
+    color: ${({ theme }) => theme.footerLinkHover};
+  }
+  .footer-underline {
+    background: ${({ theme }) => theme.footerDivider};
   }
 
   /* NAVSTYLING */
