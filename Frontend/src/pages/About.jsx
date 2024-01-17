@@ -22,7 +22,6 @@ const About = () => {
                     </p>
                 </div>
             </Wrapper>
-            <Footer />
         </div>
     )
 }
@@ -36,7 +35,6 @@ const Wrapper = styled.div`
     .PageImageContainer {
         display: grid;
         height: 25rem;
-        border-radius: var(--border-radius2);
         overflow: hidden;
         margin-bottom: 3rem;
     }
@@ -59,7 +57,7 @@ const Wrapper = styled.div`
     }
 
     /* Tablet */
-    @media (max-width:74em) {
+    @media (max-width:80em) {
         .PageImage {
             width: 160%;
             align-items: center;

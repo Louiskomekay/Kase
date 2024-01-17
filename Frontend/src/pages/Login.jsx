@@ -91,7 +91,7 @@ const Wrapper = styled.section`
     }
 
     /* Tablet */
-    @media (max-width:74em) {
+    @media (max-width:80em) {
         .form-container {
         display: grid;
         grid-template-columns: repeat(1, 1fr);

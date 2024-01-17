@@ -24,6 +24,7 @@ export const ThemeWrapper = styled.section`
   }
   .PageImageContainer {
     background:${({ theme }) => theme.cardColor};
+    border-radius: var(--border-radius2);
   }
   .footer-container{
     background:${({ theme }) => theme.backgroundColor};

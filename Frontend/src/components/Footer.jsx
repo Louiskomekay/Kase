@@ -87,7 +87,7 @@ const Wrapper = styled.footer`
         cursor: pointer;
     }
     /* Tablet */
-    @media (max-width:74em) {
+    @media (max-width:48em) {
         .footer-top {
             gap: 12rem;
         }
