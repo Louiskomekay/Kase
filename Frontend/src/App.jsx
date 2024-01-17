@@ -1,12 +1,12 @@
 //IMPORTS
 import { ThemeProvider } from 'styled-components'
 import { RouterProvider } from 'react-router-dom'
-import { Router } from './utils/Router'
+import { Router, ThemeWrapper } from './utils'
 import { useGlobalContext } from './context'
+import { ErrorElement } from './components'
 
 //THEMES STYLING
-import { LightTheme, DarkTheme } from './utils/Themes'
-import { ThemeWrapper } from './utils/ThemeWrapper'
+import { LightTheme, DarkTheme } from './utils'
 
 const App = () => {
   const { theme } = useGlobalContext();

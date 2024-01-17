@@ -1,4 +1,4 @@
-import { KaseLogo } from '../utils/Logo'
+import { KaseLogo } from '../utils';
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { FaSquareFacebook } from "react-icons/fa6";

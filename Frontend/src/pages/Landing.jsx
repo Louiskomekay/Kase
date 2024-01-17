@@ -1,6 +1,10 @@
 import styled from "styled-components"
 import { Hero } from "../components";
 
+export const loader = () => {
+    return null;
+}
+
 const Landing = () => {
     return (
         <Wrapper>
@@ -15,5 +19,4 @@ export default Landing;
 const Wrapper = styled.div`
     padding: var(--page-margin);
     margin: 3.5rem auto;
-
 `

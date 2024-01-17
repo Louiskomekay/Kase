@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const ThemeWrapper = styled.section`
+const ThemeWrapper = styled.section`
   /* GENERAL STYLING */
   color:${({ theme }) => theme.color};
   background:${({ theme }) => theme.backgroundColor};
@@ -82,3 +82,5 @@ export const ThemeWrapper = styled.section`
     border: ${({ theme }) => theme.switchIconContainerHover};
   }
 `
+
+export default ThemeWrapper;

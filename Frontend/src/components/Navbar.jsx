@@ -1,10 +1,9 @@
 import { Link, NavLink } from 'react-router-dom'
 import styled from 'styled-components'
-import { KaseLogo } from '../utils/Logo'
+import { KaseLogo, SwitchIcon } from '../utils';
 import { IoMenu } from "react-icons/io5";
 import { FiShoppingCart } from "react-icons/fi";
 import { useState } from 'react';
-import SwitchIcon from '../utils/SwitchIcon';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);

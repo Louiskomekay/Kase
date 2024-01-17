@@ -16,4 +16,4 @@ const SwitchIcon = () => {
     )
 }
 
-export default SwitchIcon
+export default SwitchIcon;

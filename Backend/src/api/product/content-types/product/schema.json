@@ -72,6 +72,15 @@
       "type": "string",
       "required": true,
       "unique": true
+    },
+    "FeaturedFits": {
+      "type": "boolean"
+    },
+    "FeaturedHyped": {
+      "type": "boolean"
+    },
+    "FeaturedHottest": {
+      "type": "boolean"
     }
   }
 }

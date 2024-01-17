@@ -396,6 +396,9 @@ export interface ApiProductProduct extends Schema.CollectionType {
     Category: Attribute.String & Attribute.Required;
     Size: Attribute.Enumeration<['XS', 'S', 'M', 'L', 'XL', 'XXL']>;
     ImageLink: Attribute.String & Attribute.Required & Attribute.Unique;
+    FeaturedFits: Attribute.Boolean;
+    FeaturedHyped: Attribute.Boolean;
+    FeaturedHottest: Attribute.Boolean;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
