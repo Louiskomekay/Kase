@@ -1,15 +1,20 @@
 import styled from "styled-components"
-import { Hero } from "../components";
+import { Hero, FeaturedProducts } from "../components";
+import axios from 'axios';
 
-export const loader = () => {
-    return null;
+const url = 'http://localhost:1337/api/products?filters[FeaturedFits][$eq]=true'
+
+export const loader = async () => {
+    const response = await axios.get(url);
+    const featuredProducts = response.data.data;
+    return { featuredProducts };
 }
 
 const Landing = () => {
     return (
         <Wrapper>
             <Hero />
-            <h2>Landing</h2>
+            <FeaturedProducts />
         </Wrapper>
     )
 }

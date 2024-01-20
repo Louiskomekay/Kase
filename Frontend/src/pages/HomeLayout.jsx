@@ -4,7 +4,7 @@ import { Footer } from "../components";
 const HomeLayout = () => {
     return (
         <>
-            <Navbar />
+            <Navbar className='sticky' />
             <Outlet />
             <Footer />
         </>

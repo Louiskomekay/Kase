@@ -5,12 +5,4 @@ export { default as ThemeWrapper } from './ThemeWrapper';
 export { LightTheme } from './Themes';
 export { DarkTheme } from './Themes';
 
-import axios from 'axios';
-
-const productionURL = 'http://localhost:1337/api/products';
-
-export const customFetch = axios.create({
-    baseURL: productionURL,
-});
-
 

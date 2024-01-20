@@ -64,7 +64,7 @@ const Wrapper = styled.div`
     padding: var(--page-margin);
     padding-top: 1rem;
     padding-bottom: 1rem;
-    position: sticky;
+    position: static;
     top: 0;
     z-index: 500rem;
 }
