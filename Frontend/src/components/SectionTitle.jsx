@@ -13,9 +13,13 @@ export default SectionTitle
 const Wrapper = styled.div`
     margin-top: 5rem;
     .sectionTitle{
+        margin-bottom: 2rem;
         text-transform: capitalize;
     }
     @media (max-width:33.75em){
         margin-top: 3rem;
+        .sectionTitle{
+            margin-bottom: 1.5rem;
+        }
     }
 `

@@ -3,7 +3,6 @@ import { ThemeProvider } from 'styled-components'
 import { RouterProvider } from 'react-router-dom'
 import { Router, ThemeWrapper } from './utils'
 import { useGlobalContext } from './context'
-import { ErrorElement } from './components'
 
 //THEMES STYLING
 import { LightTheme, DarkTheme } from './utils'
