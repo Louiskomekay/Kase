@@ -15,6 +15,7 @@ const Wrapper = styled.div`
     .sectionTitle{
         margin-bottom: 2rem;
         text-transform: capitalize;
+        color: var(--Blue1);
     }
     @media (max-width:33.75em){
         margin-top: 3rem;

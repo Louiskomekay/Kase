@@ -1,4 +1,5 @@
 export { default as KaseLogo } from './Logo';
+export { default as CartIcon } from './CartIcon';
 export { default as Router } from './Router';
 export { default as SwitchIcon } from './SwitchIcon';
 export { default as ThemeWrapper } from './ThemeWrapper';

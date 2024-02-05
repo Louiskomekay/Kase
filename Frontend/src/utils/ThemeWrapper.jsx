@@ -4,6 +4,9 @@ const ThemeWrapper = styled.section`
   /* GENERAL STYLING */
   color:${({ theme }) => theme.color};
   background:${({ theme }) => theme.backgroundColor};
+  a{
+    color:${({ theme }) => theme.color} ;
+  }
   .cardColor{
     background: ${({ theme }) => theme.cardColor};
   }
@@ -38,6 +41,13 @@ const ThemeWrapper = styled.section`
   }
   .footer-underline {
     background: ${({ theme }) => theme.footerDivider};
+  }
+  .productCard{
+    background: ${({ theme }) => theme.cardColor};
+    outline: ${({ theme }) => theme.cardOutline} ;
+  }
+  .productDetails {
+    border-top: ${({ theme }) => theme.cardOutline};
   }
 
   /* NAVSTYLING */

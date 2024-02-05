@@ -1,26 +1,30 @@
 import { Link, useLoaderData } from "react-router-dom"
 import styled from "styled-components";
+import { CartIcon } from "../utils";
+
 
 const ProductsGrid = () => {
     const { featuredProducts } = useLoaderData();
-    console.log(featuredProducts);
+
     return (
         <Wrapper>
-            <div>{featuredProducts.map((product) => {
+            <div className="productContainer">{featuredProducts.map((product) => {
                 const { id, attributes } = product;
                 const { Title: title, Price: price, ImageLink: img } = attributes;
-                console.log(img);
-                return <Link key={id}>
+
+                return <Link key={id} className="productCard">
                     <div>
-                        <div><img src={img} alt="product image" className="img" /></div>
-                        <h3>{title}</h3>
-                        <div>
-                            <div>
-                                <p>price</p>
-                                <p>{price}</p>
-                            </div>
-                            <div>
-                                <p>cart icon</p>
+                        <div className="imgContainer"><img src={img} alt="product image" className="img" /></div>
+                        <div className="productDetails">
+                            <h2>{title}</h2>
+                            <div className="pricePoint">
+                                <div>
+                                    <p>Price:</p>
+                                    <h2>{price}</h2>
+                                </div>
+                                <div className="cart">
+                                    <CartIcon />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -34,9 +38,40 @@ export default ProductsGrid;
 
 const Wrapper = styled.div`
     margin-top: 2rem;
+    .productContainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+    .imgContainer {
+        overflow: hidden;
+        margin: 0 auto;
+        padding: 1.5rem;
+        height: 25rem;
+    }
     .img {
-        max-width: 10rem;
-        max-height: 10rem;
+        width: 28rem;
+    }
+    .productCard {
+        display: grid;
+        place-items: center;
+        border-radius: 1rem;
+        overflow: hidden;
+    }
+    .productDetails{
+        /* padding: 2.5rem; */
+        outline: 1px solid red;
+    }
+    .productDetails .pricePoint{
+        margin-top: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .pricePoint .cart{
+        background: linear-gradient(142deg, rgba(37,99,235,1) 0%, rgba(95,148,250,1) 100%);
+        padding: .7rem 1.5rem;
+        border-radius: var(--border-radius2);
     }
 
     @media (max-width:33.75em){
