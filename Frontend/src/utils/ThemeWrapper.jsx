@@ -42,13 +42,17 @@ const ThemeWrapper = styled.section`
   .footer-underline {
     background: ${({ theme }) => theme.footerDivider};
   }
-  .productCard{
+  .productCard {
     background: ${({ theme }) => theme.cardColor};
-    outline: ${({ theme }) => theme.cardOutline} ;
-  }
+    outline: ${({ theme }) => theme.cardOutline};
+    transition: var(--smooth);
+  };
+  .productCard:hover {
+    outline: ${({ theme }) => theme.cardOutlineHover};
+  };
   .productDetails {
-    border-top: ${({ theme }) => theme.cardOutline};
-  }
+      border-top: ${({ theme }) => theme.cardOutline};  
+  };
 
   /* NAVSTYLING */
   .nav-container {

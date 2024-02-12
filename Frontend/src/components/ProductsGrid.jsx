@@ -1,30 +1,29 @@
 import { Link, useLoaderData } from "react-router-dom"
 import styled from "styled-components";
 import { CartIcon } from "../utils";
+import { formatPrice } from "../utils";
 
-
-const ProductsGrid = () => {
-    const { featuredProducts } = useLoaderData();
-
+const ProductsGrid = ({ data }) => {
     return (
         <Wrapper>
-            <div className="productContainer">{featuredProducts.map((product) => {
+            <div className="productContainer">{data.map((product) => {
                 const { id, attributes } = product;
                 const { Title: title, Price: price, ImageLink: img } = attributes;
+                const nairaAmount = formatPrice(price)
 
-                return <Link key={id} className="productCard">
-                    <div>
+                return <Link key={id} to={`/Products/${id}`}>
+                    <div className="productCard">
                         <div className="imgContainer"><img src={img} alt="product image" className="img" /></div>
                         <div className="productDetails">
-                            <h2>{title}</h2>
+                            <h1>{title}</h1>
                             <div className="pricePoint">
                                 <div>
-                                    <p>Price:</p>
-                                    <h2>{price}</h2>
+                                    <p className="priceLabel">Price:</p>
+                                    <h2 className="price">{nairaAmount}</h2>
                                 </div>
-                                <div className="cart">
-                                    <CartIcon />
-                                </div>
+                                <Link className="cart" to='/Cart'>
+                                    <CartIcon className='cartIcon' />
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -37,44 +36,90 @@ const ProductsGrid = () => {
 export default ProductsGrid;
 
 const Wrapper = styled.div`
-    margin-top: 2rem;
-    .productContainer {
+    .productContainer{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-    }
-    .imgContainer {
-        overflow: hidden;
-        margin: 0 auto;
-        padding: 1.5rem;
-        height: 25rem;
-    }
-    .img {
-        width: 28rem;
+        grid-template-columns: repeat(auto-fit, 27.1875rem);
+        gap: 1rem;
+        place-content: center;
     }
     .productCard {
-        display: grid;
-        place-items: center;
+        width: fit-content;
         border-radius: 1rem;
-        overflow: hidden;
     }
-    .productDetails{
-        /* padding: 2.5rem; */
-        outline: 1px solid red;
+    .imgContainer {
+        display: grid;
+        align-items: center;
     }
-    .productDetails .pricePoint{
-        margin-top: 1.5rem;
+    .img {
+        width: 27.2rem;
+    }
+    .productDetails {
+        padding: 1.5rem;
+    }
+    .productDetails h1 {
+        margin-bottom: 1rem;
+    }
+    .productDetails .pricePoint {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    .pricePoint .cart{
+    .cart {
+        display: grid;
+        place-content: center;
         background: linear-gradient(142deg, rgba(37,99,235,1) 0%, rgba(95,148,250,1) 100%);
-        padding: .7rem 1.5rem;
-        border-radius: var(--border-radius2);
+        padding: .5rem 1rem;
+        border-radius: .5rem;
     }
 
-    @media (max-width:33.75em){
-        margin-top: 1.5rem;
+    /* Tablet */
+    @media (max-width:80em) {
+        .productContainer {
+            grid-template-columns: repeat(auto-fit, 19rem);
+        }
+        .img {
+            width: 19rem;
+        }
+    }
+
+    /* Mobile */
+    /* @media (max-width:33.75em) {
+        .productContainer {
+            grid-template-columns: repeat(auto-fit, 21rem);
+        }
+        .img {
+            width: 21rem;
+        }
+        .productDetails h1 {
+            font-size: 1.4rem;
+        }
+    } */
+
+    /* Mobile */
+    @media (max-width:33.75em) {
+        .productContainer {
+            grid-template-columns: repeat(auto-fit, 10rem);
+        }
+        .productCard{
+            border-radius: 0.5rem;
+        }
+        .img {
+            width: 10rem;
+        }
+        .productDetails {
+            padding: 0.9rem;
+        }
+        .productDetails h1, .pricePoint .price {
+            font-size: 1rem;
+        }
+        .priceLabel {
+            font-size: 12px;
+        }
+        .cart{
+            padding: .1rem .8rem;
+        }
+        .cartIcon {
+            width: 1rem;
+        }
     }
 `

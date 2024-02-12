@@ -11,16 +11,13 @@ const SectionTitle = ({ text }) => {
 export default SectionTitle
 
 const Wrapper = styled.div`
-    margin-top: 5rem;
-    .sectionTitle{
-        margin-bottom: 2rem;
+    .sectionTitle {
         text-transform: capitalize;
         color: var(--Blue1);
     }
-    @media (max-width:33.75em){
-        margin-top: 3rem;
+    @media (max-width:33.75em) {
         .sectionTitle{
-            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
         }
     }
 `

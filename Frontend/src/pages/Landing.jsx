@@ -2,12 +2,24 @@ import styled from "styled-components"
 import { Hero, FeaturedProducts } from "../components";
 import axios from 'axios';
 
-const url = 'http://localhost:1337/api/products?filters[FeaturedFits][$eq]=true'
+const featuredFitsUrl = 'http://localhost:1337/api/products?filters[FeaturedFits][$eq]=true'
+const featuredHypedUrl = 'http://localhost:1337/api/products?filters[FeaturedHyped][$eq]=true'
+const featuredHottestUrl = 'http://localhost:1337/api/products?filters[FeaturedHottest][$eq]=true'
 
 export const loader = async () => {
-    const response = await axios.get(url);
-    const featuredProducts = response.data.data;
-    return { featuredProducts };
+    //Featured Fits
+    const featuredFitsResponse = await axios.get(featuredFitsUrl);
+    const featuredFitsProducts = featuredFitsResponse.data.data;
+
+    //Featured Hyped
+    const featuredHypedResponse = await axios.get(featuredHypedUrl);
+    const featuredHypedProducts = featuredHypedResponse.data.data;
+
+    //Featured Hottest
+    const featuredHottestResponse = await axios.get(featuredHottestUrl);
+    const featuredHottestProducts = featuredHottestResponse.data.data;
+
+    return { featuredFitsProducts, featuredHypedProducts, featuredHottestProducts };
 }
 
 const Landing = () => {
