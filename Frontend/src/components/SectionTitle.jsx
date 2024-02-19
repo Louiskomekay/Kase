@@ -16,7 +16,7 @@ const Wrapper = styled.div`
         color: var(--Blue1);
     }
     @media (max-width:33.75em) {
-        .sectionTitle{
+        .sectionTitle {
             font-size: 1.1rem;
         }
     }

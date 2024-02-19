@@ -16,6 +16,7 @@ export const LightTheme = {
     switchIconContainerHover: '1px solid #afbccf',
     footerBorder: '2px solid #d1ddee',
     footerDivider: '#d1ddee',
+    activeProductColor: '2px solid #64748B',
 }
 
 export const DarkTheme = {
@@ -36,4 +37,5 @@ export const DarkTheme = {
     switchIconContainerHover: '1px solid #878e90',
     footerBorder: '2px solid #3d4243',
     footerDivider: '#3d4243',
+    activeProductColor: '2px solid #deeaff',
 }

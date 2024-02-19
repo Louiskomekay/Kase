@@ -40,17 +40,6 @@
       "type": "string",
       "required": true
     },
-    "Size": {
-      "type": "enumeration",
-      "enum": [
-        "XS",
-        "S",
-        "M",
-        "L",
-        "XL",
-        "XXL"
-      ]
-    },
     "ImageLink": {
       "type": "string",
       "required": true,
@@ -64,6 +53,9 @@
     },
     "FeaturedHottest": {
       "type": "boolean"
+    },
+    "Colors": {
+      "type": "json"
     }
   }
 }

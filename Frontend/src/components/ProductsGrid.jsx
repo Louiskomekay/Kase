@@ -1,4 +1,4 @@
-import { Link, useLoaderData } from "react-router-dom"
+import { Link } from "react-router-dom"
 import styled from "styled-components";
 import { CartIcon } from "../utils";
 import { formatPrice } from "../utils";
@@ -81,19 +81,6 @@ const Wrapper = styled.div`
             width: 19rem;
         }
     }
-
-    /* Mobile */
-    /* @media (max-width:33.75em) {
-        .productContainer {
-            grid-template-columns: repeat(auto-fit, 21rem);
-        }
-        .img {
-            width: 21rem;
-        }
-        .productDetails h1 {
-            font-size: 1.4rem;
-        }
-    } */
 
     /* Mobile */
     @media (max-width:33.75em) {

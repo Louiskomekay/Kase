@@ -53,6 +53,14 @@ const ThemeWrapper = styled.section`
   .productDetails {
       border-top: ${({ theme }) => theme.cardOutline};  
   };
+  .colorButtons.activeButton {
+      outline: ${({ theme }) => theme.activeProductColor};  
+  }
+  #quantity {
+    color: ${({ theme }) => theme.color};
+    background: ${({ theme }) => theme.backgroundColor};
+    border: ${({ theme }) => theme.cardOutline};
+  }
 
   /* NAVSTYLING */
   .nav-container {
