@@ -5,9 +5,8 @@ export const LightTheme = {
     cardOutline: '2px solid #C1CADB',
     cardOutlineHover: '2px solid #8796b1',
     logoColor: '#0F172A',
-    stroke: '1px solid #64748B',
     strokeBtnColor: '#64748B',
-    strokeBorderHover: '1px solid #528DFF',
+    strokeBorderHover: '2px solid #528DFF',
     pseudoBackgroundColor: '#EFF3FB',
     navContainerBG: '#F5FDFF',
     navContainerDropShadow: '0px 4px 4px 0px #cfd8ea',
@@ -17,6 +16,7 @@ export const LightTheme = {
     footerBorder: '2px solid #d1ddee',
     footerDivider: '#d1ddee',
     activeProductColor: '2px solid #64748B',
+    listBgColor: '#dae3e6'
 }
 
 export const DarkTheme = {
@@ -26,9 +26,8 @@ export const DarkTheme = {
     cardOutline: '2px solid #515359',
     cardOutlineHover: '2px solid #a6adbe',
     logoColor: '#F5FDFF',
-    stroke: '1px solid #C1CADB',
     strokeBtnColor: ' #C1CADB',
-    strokeBorderHover: '1px solid #528DFF',
+    strokeBorderHover: '2px solid #528DFF',
     pseudoBackgroundColor: '#262626',
     navContainerBG: '#262626',
     navContainerDropShadow: '0px 4px 4px 0px #171717',
@@ -38,4 +37,5 @@ export const DarkTheme = {
     footerBorder: '2px solid #3d4243',
     footerDivider: '#3d4243',
     activeProductColor: '2px solid #deeaff',
+    listBgColor: '#2c2c2c'
 }

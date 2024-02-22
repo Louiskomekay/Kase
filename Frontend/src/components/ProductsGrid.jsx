@@ -21,9 +21,9 @@ const ProductsGrid = ({ data }) => {
                                     <p className="priceLabel">Price:</p>
                                     <h2 className="price">{nairaAmount}</h2>
                                 </div>
-                                <Link className="cart" to='/Cart'>
+                                <button className="cart" to='/Cart' onClick={() => console.log('added to cart')}>
                                     <CartIcon className='cartIcon' />
-                                </Link>
+                                </button>
                             </div>
                         </div>
                     </div>

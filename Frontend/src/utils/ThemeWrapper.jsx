@@ -5,17 +5,17 @@ const ThemeWrapper = styled.section`
   color:${({ theme }) => theme.color};
   background:${({ theme }) => theme.backgroundColor};
   a{
-    color:${({ theme }) => theme.color} ;
+    color:${({ theme }) => theme.color};
   }
   .cardColor{
     background: ${({ theme }) => theme.cardColor};
   }
   .formInput{
-    border: ${({ theme }) => theme.stroke};
+    border: ${({ theme }) => theme.cardOutline};
     color:${({ theme }) => theme.color} ;
   }
   .strokeBtn{
-    border: ${({ theme }) => theme.stroke};
+    border: ${({ theme }) => theme.cardOutline};
     color:${({ theme }) => theme.strokeBtnColor};
   }
   .strokeBtn:hover{
@@ -60,6 +60,22 @@ const ThemeWrapper = styled.section`
     color: ${({ theme }) => theme.color};
     background: ${({ theme }) => theme.backgroundColor};
     border: ${({ theme }) => theme.cardOutline};
+  }
+  .imgListContainer {
+    background: ${({ theme }) => theme.listBgColor};
+  }
+  .layoutBtn {
+    color:${({ theme }) => theme.color};
+    border: ${({ theme }) => theme.cardOutline};
+    transition: var(--smooth);
+  }
+  .activeLayoutBtn {
+    color: var(--lm-white1);
+    background: var(--Blue1);
+    border: 2px solid var(--Blue1);
+  }
+  .layoutBtn:hover {
+    border: ${({ theme }) => theme.cardOutlineHover};
   }
 
   /* NAVSTYLING */
