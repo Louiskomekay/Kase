@@ -9,7 +9,7 @@ const ProductsGrid = ({ data }) => {
             <div className="productContainer">{data.map((product) => {
                 const { id, attributes } = product;
                 const { Title: title, Price: price, ImageLink: img } = attributes;
-                const nairaAmount = formatPrice(price)
+                const nairaAmount = formatPrice(price);
 
                 return <Link key={id} to={`/Products/${id}`}>
                     <div className="productCard">

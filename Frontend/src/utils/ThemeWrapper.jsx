@@ -77,7 +77,37 @@ const ThemeWrapper = styled.section`
   .layoutBtn:hover {
     border: ${({ theme }) => theme.cardOutlineHover};
   }
-
+  .filterFormBG {
+    background: ${({ theme }) => theme.filterFormBG};
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .formWrapper {
+    background:${({ theme }) => theme.backgroundColor};
+    border: ${({ theme }) => theme.cardOutline};
+  }
+  .selectStyling {
+    color:${({ theme }) => theme.color};
+    background:${({ theme }) => theme.backgroundColor};
+    border: ${({ theme }) => theme.cardOutline};
+  }
+  .searchBtn, .resetBtn {
+    background-color:${({ theme }) => theme.filterBtn};
+  }
+  .line {
+    background-color:${({ theme }) => theme.lineColor};
+  }
+  .loaderContainer, .paginationBtn {
+    background-color:${({ theme }) => theme.backgroundColor};
+  }
+  .paginationBtn {
+    color:${({ theme }) => theme.color};
+    border:${({ theme }) => theme.cardOutline};
+  }
+  .paginationBtn:hover {
+    border:${({ theme }) => theme.cardOutlineHover};
+  }
   /* NAVSTYLING */
   .nav-container {
     background: ${({ theme }) => theme.navContainerBG};

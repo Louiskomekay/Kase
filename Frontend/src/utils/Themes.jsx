@@ -16,7 +16,10 @@ export const LightTheme = {
     footerBorder: '2px solid #d1ddee',
     footerDivider: '#d1ddee',
     activeProductColor: '2px solid #64748B',
-    listBgColor: '#dae3e6'
+    listBgColor: '#dae3e6',
+    filterFormBG: '#EBF6FE',
+    filterBtn: '#8699b3',
+    lineColor: '#C1CADB'
 }
 
 export const DarkTheme = {
@@ -37,5 +40,8 @@ export const DarkTheme = {
     footerBorder: '2px solid #3d4243',
     footerDivider: '#3d4243',
     activeProductColor: '2px solid #deeaff',
-    listBgColor: '#2c2c2c'
+    listBgColor: '#2c2c2c',
+    filterFormBG: '#1e1e1e',
+    filterBtn: '#64748B',
+    lineColor: '#515359'
 }

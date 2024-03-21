@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-const FormInput = ({ label, name, type, defaultValue }) => {
+const FormInput = ({ label, name, type, defaultValue, id, }) => {
     return (
         <Wrapper>
             <div className='form-control'>
@@ -14,6 +14,7 @@ const FormInput = ({ label, name, type, defaultValue }) => {
                     name={name}
                     className='formInput stroke'
                     defaultValue={defaultValue}
+                    id={id}
                 />
             </div>
         </Wrapper>
@@ -41,7 +42,7 @@ const Wrapper = styled.section`
     /* Mobile */
     @media(max-width:33.75em){
         .formInput {
-        width: 23rem;
+            width: 23rem;
         }
     }
 `

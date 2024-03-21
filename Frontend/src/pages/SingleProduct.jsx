@@ -160,7 +160,6 @@ const Wrapper = styled.div`
         flex-direction: column;
     }
     #quantity {
-        appearance: none;
         padding: 1rem;
         margin-top: .5rem;
         max-width: 6rem;
